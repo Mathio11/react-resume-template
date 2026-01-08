@@ -69,21 +69,22 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Sai Surya Vidul Chinthamaneni.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I&apos;m an LA-based recent graduate aspiring to become an{' '}
+        <strong className="text-stone-100">AI/ML Engineer</strong>. I currently work as a{' '}
+        <strong className="text-stone-100">Graduate Student Researcher</strong> at{' '}
+        <strong className="text-stone-100">Trustworthy Autonomous Systems Lab (UC Riverside)</strong>, where I help build
+        multi-agent navigation and exploration systems.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time, you can find me gaming, hitting the gym, or catching up on popular anime.
       </p>
     </>
   ),
+
   actions: [
     {
       href: '/assets/resume.pdf',
@@ -104,16 +105,16 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I’m an LA-based AI/ML engineer and a recent Master’s graduate from UC Riverside (Electrical Engineering). 
+I enjoy building multimodal, attention-based systems and working on model alignment and safety, especially with LLMs and vision language models. 
+I’m most comfortable working in Python and PyTorch, and I’ve also worked with tools like Hugging Face, LangChain, Docker, and cloud platforms to take ideas from research to real deployments.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Los Angeles, CA', Icon: MapIcon},
+    {label: 'Experience', text: '2 years', Icon: CalendarIcon},
+    {label: 'Focus', text: 'LLMs/VLMs, fine tuning, LoRA, multi-agent autonomy', Icon: FlagIcon},
+    {label: 'Interests', text: 'Gaming, gym, anime', Icon: SparklesIcon},
+    {label: 'Study', text: "University of California - Riverside ", Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Trustworthy Autonomous Systems Lab (UC Riverside)', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -129,67 +130,88 @@ export const skills: SkillGroup[] = [
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
+        name: 'Hindi',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
+        name: 'Telugu',
+        level: 9,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'ML Frameworks and Libraries',
     skills: [
       {
-        name: 'React Native',
+        name: 'Python',
+        level: 10,
+      },
+      {
+        name: 'PyTorch',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'NumPy',
+        level: 9,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Pandas',
+        level: 9,
+      },
+      {
+        name: 'scikit-learn',
+        level: 8,
+      },
+      {
+        name: 'OpenCV',
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: 'LLM and Multimodal Tools',
+    skills: [
+      {
+        name: 'Hugging Face Transformers',
+        level: 9,
+      },
+      {
+        name: 'LangChain',
+        level: 7,
+      },
+      {
+        name: 'Weights and Biases',
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: 'Dev and Deployment Tools',
+    skills: [
+      {
+        name: 'Git / GitHub',
+        level: 9,
+      },
+      {
+        name: 'Docker',
+        level: 8,
+      },
+      {
+        name: 'AWS',
+        level: 7,
+      },
+      {
+        name: 'Kubernetes',
+        level: 6,
+      },
+      {
+        name: 'Jupyter',
+        level: 10,
       },
     ],
   },
 ];
+
 
 /**
  * Portfolio section
