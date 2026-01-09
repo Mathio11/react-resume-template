@@ -111,7 +111,7 @@ I’m most comfortable working in Python and PyTorch, and I’ve also worked wit
   aboutItems: [
     {label: 'Location', text: 'Los Angeles, CA', Icon: MapIcon},
     {label: 'Experience', text: '2 years', Icon: CalendarIcon},
-    {label: 'Focus', text: 'LLMs/VLMs, fine tuning, LoRA, multi-agent autonomy', Icon: FlagIcon},
+    {label: 'Focus', text: 'LLMs/VLMs, fine tuning, LoRA, inference', Icon: FlagIcon},
     {label: 'Interests', text: 'Gaming, gym, anime', Icon: SparklesIcon},
     {label: 'Study', text: "University of California - Riverside ", Icon: AcademicCapIcon},
     {label: 'Employment', text: 'Trustworthy Autonomous Systems Lab (UC Riverside)', Icon: BuildingOffice2Icon},
@@ -139,6 +139,25 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
+
+  {
+    name: 'LLM and Multimodal Tools',
+    skills: [
+      {
+        name: 'Hugging Face Transformers',
+        level: 9,
+      },
+      {
+        name: 'LangChain',
+        level: 7,
+      },
+      {
+        name: 'Weights and Biases',
+        level: 7,
+      },
+    ],
+  },
+
   {
     name: 'ML Frameworks and Libraries',
     skills: [
@@ -164,27 +183,11 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'OpenCV',
-        level: 7,
+        level: 8,
       },
     ],
   },
-  {
-    name: 'LLM and Multimodal Tools',
-    skills: [
-      {
-        name: 'Hugging Face Transformers',
-        level: 9,
-      },
-      {
-        name: 'LangChain',
-        level: 7,
-      },
-      {
-        name: 'Weights and Biases',
-        level: 7,
-      },
-    ],
-  },
+
   {
     name: 'Dev and Deployment Tools',
     skills: [
@@ -218,45 +221,45 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Visual Question Answering (VQA) Using CLIP with Local Feature Enhancement',
+    description: 'Built a CLIP-based VQA system that boosts accuracy by enhancing local image features for better question grounded reasoning.',
+    url: 'https://github.com/Mathio11/CS_228_CLIP_LOCAL_FEATURE_ENHANCEMENT',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Attention Based Distillation (ViT to CNN)',
+    description: 'Distilled a ViT teacher into a lightweight CNN student using dynamic attention weighting (entropy based) with KL loss + attention alignment.',
+    url: 'https://github.com/SiddhartaDutta/Attention-Based-Distillation',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Image Captioning Using CNN and RNN',
+    description: 'Built an end to end image captioning model using a CNN encoder and RNN decoder to generate natural language descriptions.',
+    url: 'https://github.com/Mathio11/Image_Captioning_using_CNN_and_RNN',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Sentiment Analysis of Course Reviews',
+    description: 'Built an NLP pipeline to classify course review sentiment and summarize feedback using text preprocessing and ML models.',
+    url: 'https://github.com/Mathio11/Sentiment_Analysis_of_Course_Reviews',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'GPT-4o Bot',
+    description: 'Built a chatbot powered by GPT-4o with a simple UI and reusable prompt workflows for quick Q&A and automation.',
+    url: 'https://github.com/Mathio11/GPT-4o-bot',
     image: porfolioImage5,
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'DOCTOR: Dynamic On-Chip Calibration for Photonic Tensor Accelerators',
+    description: 'Official implementation of DOCTOR, a training-free on-chip remediation framework for reliable photonic neural accelerators under temporal noise drift.',
+    url: 'https://github.com/TRIGGERONE/DOCTOR',
     image: porfolioImage6,
   },
   {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'T2GCN: Fast Thermal Analysis for Chiplet Design',
+    description: 'GCN-based thermal simulation for chiplet systems using global power features, skip connections, and attention to predict thermal maps efficiently.',
+    url: 'https://github.com/TRIGGERONE/ThermalGCN',
     image: porfolioImage7,
   },
   {
@@ -265,24 +268,6 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://reactresume.com',
     image: porfolioImage8,
   },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
 ];
 
 /**
@@ -290,43 +275,66 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'June 2025',
+    location: 'University of California, Riverside',
+    title: 'Master\'s in Electrical Engineering',
+    content: <p>During my Master&apos;s at UC Riverside, I did a deep dive into AI/ML through coursework and hands-on projects, which helped me build a strong foundation in machine learning and deep learning. That path naturally led me into research at the Trustworthy Autonomous Systems Lab, where I began working on real-world autonomous systems problems and gained experience designing, training, and evaluating learning-based models end to end.</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'May 2023',
+    location: 'Jawaharlal Nehru Technological University - GRIET',
+    title: 'Bachelor\'s, Electrical and Electronics Engineering',
+    content: <p>During my Bachelor&apos;s at JNTU - GRIET, I was first introduced to AI/ML through a simple project I built with friends, which sparked my interest in learning how intelligent systems work. Along the way, I strengthened my core math foundation (linear algebra, probability, and optimization) and built strong fundamentals in software and hardware, giving me the base I later used to transition into practical internships.</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'March 2025 - Present',
+    location: 'Trustworthy Autonomous Systems Lab (TASL)',
+    title: 'Graduate Student Researcher',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Led research on multi-agent exploration and navigation in complex, dynamic environments using an approach similar
+        to PirlNav on the Habitat platform. Built advanced models for semantic mapping and shared location awareness
+        using Python and PyTorch. Developed a two-stage decision-making framework that integrates conformal prediction
+        for uncertainty-aware planning, enabling robust collaboration via centralized coordination and improving success
+        in unseen environments.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'August 2022 - April 2023',
+    location: 'PathFinder Info Solutions',
+    title: 'Machine Learning Intern',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Engineered features from 25K+ mentor–mentee profiles and session feedback using Python, Pandas, NumPy, SQL, and
+        scikit-learn to support personalized matching experiments. Trained and tuned logistic regression, random
+        forest, and TF-IDF with cosine similarity models using GridSearchCV and cross-validation, improving match
+        precision by 17% over heuristic baselines. Built a Streamlit dashboard with Plotly on AWS to visualize
+        recommendations and sentiment-adjusted scores, implemented weighted ranking logic, and maintained the pipeline
+        with Git for internal testing.
+      </p>
+    ),
+  },
+  {
+    date: 'January 2022 - July 2022',
+    location: 'Gokul',
+    title: 'Machine Learning Intern',
+    content: (
+      <p>
+        Preprocessed and modeled time-series sensor data from embedded water control systems for fault detection and
+        predictive maintenance, collaborating closely with the R&D team. Built reproducible pipelines in Pandas, NumPy,
+        SQL, and Jupyter to transform 60K+ operational records into clean, normalized datasets; used C to help interpret
+        control board outputs and sensor integration. Applied anomaly detection methods including Z-score analysis and
+        KNN, and visualized recurring patterns with Matplotlib and Seaborn, informing 2 key hardware design
+        improvements.
       </p>
     ),
   },
 ];
+
 
 /**
  * Testimonial section
@@ -358,27 +366,27 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'You can primarily get in touch through email or LinkedIn.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'saisuryavidul@gmail.com',
+      href: 'mailto:saisuryavidul@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Riverside, CA',
+      href: 'https://maps.app.goo.gl/L5Ns9k8dVLDutvZP9',
     },
     {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      type: ContactType.LinkedIn,
+      text: '@Sai Surya Vidul Chinthamaneni',
+      href: 'https://www.linkedin.com/in/sai-surya-vidul-chinthamaneni',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'Mathio11',
+      href: 'https://github.com/Mathio11',
     },
   ],
 };
@@ -387,9 +395,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Mathio11'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/sai-surya-vidul-chinthamaneni'},
+  {label: 'X', Icon: TwitterIcon, href: 'https://x.com/vidulvictorious?s=11'},
 ];
