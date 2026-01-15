@@ -262,12 +262,6 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://github.com/TRIGGERONE/ThermalGCN',
     image: porfolioImage7,
   },
-  // {
-  //   title: 'Project title 8',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://reactresume.com',
-  //   image: porfolioImage8,
-  // },
 ];
 
 /**
