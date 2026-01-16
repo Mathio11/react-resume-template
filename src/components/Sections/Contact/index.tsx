@@ -23,7 +23,7 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
 };
 
 const Contact: FC = memo(() => {
-  const {description, headerText, items} = contact;
+  const {headerText, description, items} = contact;
 
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Contact}>
@@ -38,7 +38,7 @@ const Contact: FC = memo(() => {
             <p className="prose max-w-xl text-center leading-6 text-neutral-300">{description}</p>
 
             <dl className="mx-auto flex w-full max-w-4xl flex-wrap items-center justify-center gap-x-10 gap-y-4 text-base text-neutral-500">
-              {items.map(({href, text, type}) => {
+              {items.map(({type, text, href}) => {
                 const {Icon, srLabel} = ContactValueMap[type];
 
                 return (
@@ -46,13 +46,13 @@ const Contact: FC = memo(() => {
                     <dt className="sr-only">{srLabel}</dt>
                     <dd>
                       <a
+                        href={href}
+                        rel="noreferrer"
+                        target="_blank"
                         className={classNames(
                           'inline-flex items-center gap-x-3 rounded-md px-2 py-1 text-neutral-300 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500',
                           {'hover:text-white': href},
-                        )}
-                        href={href}
-                        rel="noreferrer"
-                        target="_blank">
+                        )}>
                         <Icon aria-hidden="true" className="h-5 w-5 text-neutral-100" />
                         <span className="text-sm sm:text-base">{text}</span>
                       </a>
