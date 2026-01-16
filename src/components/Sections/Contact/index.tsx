@@ -1,4 +1,3 @@
-
 import {DevicePhoneMobileIcon, EnvelopeIcon, MapPinIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import {FC, memo} from 'react';
@@ -24,25 +23,22 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
 };
 
 const Contact: FC = memo(() => {
-  const {headerText, description, items} = contact;
+  const {description, headerText, items} = contact;
 
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Contact}>
       <div className="flex flex-col items-center gap-y-6 text-center">
-        {/* Title row centered */}
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-center">
           <EnvelopeIcon className="hidden h-16 w-16 text-white md:block" />
           <h2 className="text-2xl font-bold text-white">{headerText}</h2>
         </div>
 
-        {/* Content centered */}
         <div className="grid w-full grid-cols-1 place-items-center gap-6">
           <div className="flex flex-col items-center gap-y-4">
             <p className="prose max-w-xl text-center leading-6 text-neutral-300">{description}</p>
 
-            {/* List centered as a block, aligned internally */}
             <dl className="mx-auto flex w-full max-w-4xl flex-wrap items-center justify-center gap-x-10 gap-y-4 text-base text-neutral-500">
-              {items.map(({type, text, href}) => {
+              {items.map(({href, text, type}) => {
                 const {Icon, srLabel} = ContactValueMap[type];
 
                 return (
