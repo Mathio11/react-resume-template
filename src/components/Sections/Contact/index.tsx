@@ -55,8 +55,8 @@ const Contact: FC = memo(() => {
                           {'hover:text-white': href},
                         )}
                         href={href}
-                        target="_blank"
-                        rel="noreferrer">
+                        rel="noreferrer"
+                        target="_blank">
                         <Icon aria-hidden="true" className="h-5 w-5 text-neutral-100" />
                         <span className="text-sm sm:text-base">{text}</span>
                       </a>
@@ -72,5 +72,5 @@ const Contact: FC = memo(() => {
   );
 });
 
-Contact.displayName = 'About';
+Contact.displayName = 'Contact';
 export default Contact;
